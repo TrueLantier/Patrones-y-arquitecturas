@@ -14,8 +14,8 @@ public class Comercial extends Empleado{
 
     @Override
     public String toString() {
-        System.out.println("La comisión que cobra es de: " + getComisión());
-        return null;
+        String mensaje = super.toString() + "\nLa comisión que cobra es de: " + getComisión() + " €";
+        return mensaje;
     }
 
     @Override
@@ -23,8 +23,7 @@ public class Comercial extends Empleado{
         if ((edad > 30) && (comisión > 200)) {
             salario += PLUS;
             return true;
-        }
-        else {
+        }   else {
             System.out.println("No cumple las condiciones para un aumento salarial.");
             return false;
         }

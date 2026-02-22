@@ -32,10 +32,10 @@ public abstract class Empleado {
 
     @Override
     public String toString() {
-        System.out.println("El empleado es: " + getNombre());
-        System.out.println("Su edad es: " + getEdad());
-        System.out.println("Su salario es: " + getSalario());
-        return null;
+        String mensaje = "El nombre del empleado es: " + getNombre() + "\nSu edad es: " + getEdad() +
+                "\nSu salario es: " + getSalario() + " €";
+
+        return mensaje;
     }
 
     public abstract boolean plus();

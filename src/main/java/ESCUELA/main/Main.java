@@ -4,9 +4,7 @@ Angel Eduardo Pedraza Ordoñez.
 Info 35
  */
 
-import ESCUELA.Ejercicio1.Comercial;
-import ESCUELA.Ejercicio1.Empleado;
-import ESCUELA.Ejercicio1.Repartidor;
+import ESCUELA.Ejercicio1.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,12 +18,10 @@ public class Main {
         empleados[5] = new Repartidor("Laura", 19, 900, "zona 3");
 
         for (Empleado empleado : empleados) {
-            System.out.println("El empleado es: " + empleado.getNombre());
-            System.out.println("Su edad es: " + empleado.getEdad());
-            System.out.println("Su salario es: " + empleado.getSalario());
+            System.out.println(empleado.toString());
 
             if (empleado.plus()) {
-                System.out.println("Su nuevo salario es: " + empleado.getSalario());
+                System.out.println("Su nuevo salario es: " + empleado.getSalario() + " €");
             }
             System.out.println();
         }
