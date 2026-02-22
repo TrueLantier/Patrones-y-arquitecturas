@@ -19,13 +19,12 @@ public class Comercial extends Empleado{
     }
 
     @Override
-    public boolean plus() {
+    public void plus() {
         if ((edad > 30) && (comisión > 200)) {
             salario += PLUS;
-            return true;
+            System.out.println("Su nuevo salario es: " + getSalario() + " €");
         }   else {
             System.out.println("No cumple las condiciones para un aumento salarial.");
-            return false;
         }
     }
 }

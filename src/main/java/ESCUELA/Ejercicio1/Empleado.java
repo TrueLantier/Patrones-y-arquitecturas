@@ -38,5 +38,5 @@ public abstract class Empleado {
         return mensaje;
     }
 
-    public abstract boolean plus();
+    public abstract void plus();
 }

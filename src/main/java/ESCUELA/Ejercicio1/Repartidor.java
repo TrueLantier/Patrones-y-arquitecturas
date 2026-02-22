@@ -19,13 +19,12 @@ public class Repartidor extends Empleado{
     }
 
     @Override
-    public boolean plus() {
+    public void plus() {
         if ((edad < 25) && (zona.equals("zona 3"))) {
             salario += PLUS;
-            return true;
+            System.out.println("Su nuevo salario es: " + getSalario() + " €");
         }   else {
             System.out.println("No cumple las condiciones para un aumento salarial.");
-            return false;
         }
     }
 }

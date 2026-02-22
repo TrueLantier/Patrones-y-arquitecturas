@@ -19,10 +19,7 @@ public class Main {
 
         for (Empleado empleado : empleados) {
             System.out.println(empleado.toString());
-
-            if (empleado.plus()) {
-                System.out.println("Su nuevo salario es: " + empleado.getSalario() + " €");
-            }
+            empleado.plus();
             System.out.println();
         }
     }
