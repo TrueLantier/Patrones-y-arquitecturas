@@ -1,8 +1,0 @@
-1- Convención comentarios:
-/*
-¿espacio?
-*/
-
-2- módulo de más de una palabra.
-3- qué son los famosos records.
-4- La parte de excepciones, se ignora el catch correcto.
