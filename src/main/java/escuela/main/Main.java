@@ -1,10 +1,10 @@
-package ESCUELA.main;
+package escuela.main;
 /*
-Angel Eduardo Pedraza Ordoñez.
-Info 35
+ Angel Eduardo Pedraza Ordoñez.
+ Info 35
  */
 
-import ESCUELA.Ejercicio1.*;
+import escuela.ejercicio1.*;
 
 public class Main {
     public static void main(String[] args) {

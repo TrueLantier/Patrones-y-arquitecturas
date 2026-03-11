@@ -1,7 +1,7 @@
-package ESCUELA.Ejercicio1;
+package escuela.ejercicio1;
 /*
-Angel Eduardo Pedraza Ordoñez.
-Info 35
+ Angel Eduardo Pedraza Ordoñez.
+ Info 35
  */
 
 public abstract class Empleado {

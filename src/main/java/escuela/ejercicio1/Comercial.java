@@ -1,4 +1,4 @@
-package ESCUELA.Ejercicio1;
+package escuela.ejercicio1;
 
 public class Comercial extends Empleado{
     private double comisión;
