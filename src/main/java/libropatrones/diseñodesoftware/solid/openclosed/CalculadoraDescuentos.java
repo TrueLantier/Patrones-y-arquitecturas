@@ -13,7 +13,6 @@ public class CalculadoraDescuentos {
         return monto;
     }
 }
-
 /*
  ¿Por qué está mal?
  Imagina que el equipo de Marketing decide crear una nueva membresía: "CLIENTE_PREMIUM". Para añadir esta funcionalidad,
