@@ -3,15 +3,21 @@ package cursomouredev.solid.srp.gestiónbiblioteca;
 public class Libro {
     private String nombre;
     private String autor;
-    private int cantidadDisponible; // Se asume al principio que están todos.
+    public int cantidadDisponible; // Se asume al principio que están todos.
     private boolean prestado;
 
     public Libro(String nombre, String autor, int cantidadAgregada) {
         this.nombre = nombre;
         this.autor = autor;
-        verificarCantidad(cantidadDisponible);
+        verificarCantidad(cantidadAgregada);
         this.cantidadDisponible = cantidadAgregada;
         prestado = false;
+    }
+
+    private void verificarCantidad(int cantidad) throws IllegalArgumentException{
+        if ((cantidad <= 0) || (cantidad >= 1000)) {
+            throw new IllegalArgumentException("Cantidad incorrecta.");
+        }
     }
 
     public String getNombre() {
@@ -44,12 +50,6 @@ public class Libro {
 
     public void setPrestado(boolean prestado) {
         this.prestado = prestado;
-    }
-
-    private void verificarCantidad(int cantidad) throws IllegalArgumentException{
-        if (cantidad <= 0 || cantidad >= 1000) {
-            throw new IllegalArgumentException("Cantidad incorrecta");
-        }
     }
 
     @Override

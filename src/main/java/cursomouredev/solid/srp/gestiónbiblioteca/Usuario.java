@@ -12,6 +12,12 @@ public class Usuario {
         this.correo = correo;
     }
 
+    public void verificarCorreo(String correo) throws IllegalArgumentException{
+        if (!correo.contains("@")) {
+            throw new IllegalArgumentException("Correo incorrecto.");
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -34,12 +40,6 @@ public class Usuario {
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    public void verificarCorreo(String correo) throws IllegalArgumentException{
-        if (!correo.contains("@")) {
-            throw new IllegalArgumentException("Correo incorrecto.");
-        }
     }
 
     @Override
