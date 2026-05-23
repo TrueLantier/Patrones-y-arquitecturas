@@ -5,7 +5,7 @@ public class Motor extends Vehículo{
     private static final int CAPACIDADMAX = 2;
 
     public Motor(String tipoMoto, String marca, int cantidadPasajeros) {
-        verificarPasajeros(cantidadPasajeros, CAPACIDADMAX);
+        Vehículo.verificarPasajeros(cantidadPasajeros, CAPACIDADMAX);
         super(marca, cantidadPasajeros);
         tipoVehículo = tipoMoto;
     }
@@ -19,7 +19,11 @@ public class Motor extends Vehículo{
 
     @Override
     public void frenar() {
-        System.out.println("El carro está frenando...");
+        System.out.println("La Moto está frenando...");
         velocidad = 0;
+    }
+
+    public int getRUEDAS() {
+        return RUEDAS;
     }
 }

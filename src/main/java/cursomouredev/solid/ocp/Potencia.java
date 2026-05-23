@@ -1,4 +1,4 @@
-package cursomouredev.solid.ocp.calculadora;
+package cursomouredev.solid.ocp;
 
 public class Potencia {
     public int calcularPotencia(int base, int exponente) {

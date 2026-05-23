@@ -1,4 +1,4 @@
-package cursomouredev.solid.srp.gestiónbiblioteca;
+package cursomouredev.solid.srp;
 
 public class Usuario {
     private String nombre;

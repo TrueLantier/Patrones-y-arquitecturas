@@ -1,5 +1,11 @@
 package cursomouredev.solid.lsp;
 
+/**
+ * En este ejercicio se hace uso de los conceptos relacionados con la palabra reservada "static" para practicar.
+ * Es posible asignar la variable capacidadMax al constructor de la superclase Vehículo, personalizando eso para
+ * todas las subclases, pero pierde el objetivo.
+ */
+
 public abstract class Vehículo {
     protected int cantidadPasajeros;
     protected double velocidad = 0;

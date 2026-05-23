@@ -1,4 +1,4 @@
-package cursomouredev.solid.srp.gestiónbiblioteca;
+package cursomouredev.solid.srp;
 import java.time.*;
 
 public class Préstamos {

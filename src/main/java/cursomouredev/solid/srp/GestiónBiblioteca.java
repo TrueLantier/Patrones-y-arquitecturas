@@ -1,4 +1,4 @@
-package cursomouredev.solid.srp.gestiónbiblioteca;
+package cursomouredev.solid.srp;
 
 import java.util.ArrayList;
 import java.util.List;

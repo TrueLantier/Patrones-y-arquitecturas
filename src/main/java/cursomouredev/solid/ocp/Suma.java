@@ -1,4 +1,4 @@
-package cursomouredev.solid.ocp.calculadora;
+package cursomouredev.solid.ocp;
 
 public class Suma {
     public int sumar(int... números) {

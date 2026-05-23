@@ -1,8 +1,6 @@
 package cursomouredev;
 
 import cursomouredev.solid.lsp.*;
-import cursomouredev.solid.ocp.calculadora.*;
-import cursomouredev.solid.srp.gestiónbiblioteca.*;
 
 public class Main {
     public static void main(String[] args) {
