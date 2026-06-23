@@ -2,6 +2,7 @@ package escuela.ejercicio3;
 
 // Clase que representa la configuración global única (Singleton).
 // Aplicación --> Gestor de libros.
+// Se puede mejorar con synchronized para concurrencia.
 
 public class ConfiguraciónGlobal {
 
@@ -27,12 +28,11 @@ public class ConfiguraciónGlobal {
         return instancia;
     }
 
-    // Opcional: método para mostrar toda la configuración
     @Override
     public String toString() {
-        return "ConfiguracionGlobal{" +
+        return "ConfiguraciónGlobal{" +
                 "nombreApp='" + nombreApp + '\'' +
-                ", version='" + versión + '\'' +
+                ", versión='" + versión + '\'' +
                 ", modoDebug=" + modoDebug +
                 '}';
     }

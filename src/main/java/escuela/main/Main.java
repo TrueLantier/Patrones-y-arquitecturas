@@ -5,9 +5,11 @@ package escuela.main;
  */
 
 import escuela.ejercicio1.*;
+import escuela.ejercicio3.ConfiguraciónGlobal;
 
 public class Main {
     public static void main(String[] args) {
-
+        ConfiguraciónGlobal cg = ConfiguraciónGlobal.getInstancia();
+        System.out.println(cg.toString());
     }
 }
