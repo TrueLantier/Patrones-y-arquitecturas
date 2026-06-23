@@ -1,9 +1,12 @@
 package escuela.ejerciciofinal.factorymethod;
 
 public class CreadorPush extends CreadorNotification{
+    public CreadorPush(String mensaje) {
+        super.mensaje = mensaje;
+    }
+
     @Override
     protected Notification crearNotification() {
-        super.mensaje = mensaje;
         return new NotificationPush();
     }
 }
