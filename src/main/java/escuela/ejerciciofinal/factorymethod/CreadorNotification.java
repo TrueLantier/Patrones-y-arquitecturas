@@ -1,6 +1,7 @@
 package escuela.ejerciciofinal.factorymethod;
 
 public abstract class CreadorNotification {
+    String mensaje;
 
     // Factory Method
     protected abstract Notification crearNotification();
@@ -8,6 +9,7 @@ public abstract class CreadorNotification {
     // Lógica en común
     public void processNotification() {
         Notification notification = crearNotification();
-        //notification.enviar();
+        notification.enviar(mensaje);
+        mensaje = "";
     }
 }
