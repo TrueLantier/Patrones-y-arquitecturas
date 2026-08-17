@@ -1,6 +1,6 @@
 package cursomouredev.solid.lsp;
 
-public class Carro extends Vehículo{
+public class Carro extends Vehículo {
     private final int RUEDAS = 4;
     private static final int CAPACIDADMAX = 5;
 
