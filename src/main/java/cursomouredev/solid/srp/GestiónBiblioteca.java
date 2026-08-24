@@ -6,7 +6,7 @@ import java.util.List;
 public class GestiónBiblioteca {
     public List<Libro> libros = new ArrayList<>();
     public List<Usuario> usuarios = new ArrayList<>();
-    public List<Préstamos> listaPréstamos = new ArrayList<>();
+    public List<Préstamo> listaPréstamos = new ArrayList<>();
     public Usuario usuario;
     public Libro book;
 
@@ -15,10 +15,14 @@ public class GestiónBiblioteca {
             for (Libro libroRegistrado: libros) {
                 if (libroActual.getNombre().equals(libroRegistrado.getNombre())) {
                     libroRegistrado.cantidadDisponible += libroActual.cantidadDisponible;
+                    // cantidadDisponible es pública debido a lo incómodo de cambiarle el valor constantemente con set.
+
+                    System.out.println("Libro agregado.");
                     continue uno;
                 }
             }
             libros.add(libroActual);
+            System.out.println("Libro agregado.");
         }
     }
 
@@ -39,7 +43,7 @@ public class GestiónBiblioteca {
             throw new IllegalArgumentException("Nombre de usuario o libro incorrecto.");
         }
 
-        Préstamos préstamo = new Préstamos(usuario, book);
+        Préstamo préstamo = new Préstamo(usuario, book);
         listaPréstamos.add(préstamo);
         System.out.println("Préstamo exitoso.");
     }
@@ -48,7 +52,7 @@ public class GestiónBiblioteca {
         for (Usuario user: usuarios) {
             if (user.getNombre().equals(nombreUsuario)) {
                 usuario = user;
-                System.out.println("Usuario devolver exitoso.");
+                System.out.println("Devolver usuario exitoso.");
             }
         }
 
@@ -56,7 +60,7 @@ public class GestiónBiblioteca {
             if (l.getNombre().equals(nombreLibro)) {
                 book = l;
                 l.cantidadDisponible++;
-                System.out.println("Libro devolver exitoso.");
+                System.out.println("Devolver libro exitoso.");
             }
         }
 
@@ -82,7 +86,7 @@ public class GestiónBiblioteca {
                     book = l;
                     return true;
                 }   else {
-                    System.out.println("Ya no hay más copias disponibles del libro " + l.getNombre());
+                    System.out.println("Ya no hay más copias disponibles del libro " + nombre);
                     return false;
                 }
             }
@@ -108,6 +112,8 @@ public class GestiónBiblioteca {
         miBiblioteca.agregarLibros(l1, l2, l3, l4, l5, l6, l7, l8);
         return miBiblioteca;
     }
+
+    // Separación aquí.
 
     GestiónBiblioteca miBiblioteca = getGestiónBiblioteca();
 
@@ -138,5 +144,4 @@ public class GestiónBiblioteca {
         for (Préstamos p: miBiblioteca.listaPréstamos) {
             System.out.println(p.libro + " <-> " + p.usuario + " fecha: " + p.fecha);
         }
-    }
  */

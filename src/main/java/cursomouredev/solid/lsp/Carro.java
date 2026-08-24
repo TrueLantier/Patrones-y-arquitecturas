@@ -5,7 +5,7 @@ public class Carro extends Vehículo {
     private static final int CAPACIDADMAX = 5;
 
     public Carro(String tipoCarro, String marca, int cantidadPasajeros) {
-        Vehículo.verificarPasajeros(cantidadPasajeros, CAPACIDADMAX);
+        Vehículo.verificarPasajeros(cantidadPasajeros, CAPACIDADMAX); // Verificación antes de súper.
         super(marca, cantidadPasajeros);
         tipoVehículo = tipoCarro;
     }
