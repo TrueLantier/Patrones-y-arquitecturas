@@ -1,7 +1,39 @@
 package ia.minimax.faseuno;
 
 /**
- * Implementación del juego de la sustracción.
+ * =====================================================================
+ *  JUEGO DE SUSTRACCIÓN (UNA PILA)
+ * =====================================================================
+ *
+ *  Reglas:
+ *    - Hay N fichas en una sola pila.
+ *    - En cada turno se quitan 1 o 2 fichas (nunca 0, nunca más de 2).
+ *    - Quien no puede mover pierde (juego normal, no misère).
+ *      Equivalente: gana quien hace el último movimiento.
+ *
+ *  Modelo con la interfaz GameState:
+ *    - Estado:      (n, isMax), con n = fichas restantes, n >= 0.
+ *    - Movimientos: n-1 y (si n >= 2) n-2.
+ *    - Terminal:    n == 0  (el jugador que debe mover no puede).
+ *    - utility():   SOLO válida en terminal.
+ *                   Si n == 0, el que mueve pierde:
+ *                     isMax == true  -> MAX pierde -> -1
+ *                     isMax == false -> MIN pierde -> +1
+ *                   ->  return isMax ? -1 : +1;
+ *
+ *  Posiciones perdedoras para el jugador que mueve:
+ *    n = 0, 3, 6, 9, ...   (múltiplos de 3)
+ *  Posiciones ganadoras:
+ *    cualquier otro n.
+ *
+ *  Valores esperados con Minimax:
+ *    SubtractionState(3, true) -> -1   (MAX pierde si MIN juega bien)
+ *    SubtractionState(4, true) -> +1
+ *    SubtractionState(6, true) -> -1
+ *
+ *  Estrategia (por si quieres comprobar a mano):
+ *    deja siempre al rival un múltiplo de 3.
+ * =====================================================================
  */
 
 import java.util.ArrayList;
