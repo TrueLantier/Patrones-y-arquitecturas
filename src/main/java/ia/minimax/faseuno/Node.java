@@ -6,15 +6,12 @@ import java.util.List;
 /**
  * Nodo genérico del árbol de prueba. Implementa GameState para que Minimax
  * pueda recorrerlo sin saber si es un árbol preconstruido o un juego real.
- *
- * (Alternativa "más pura": un adaptador NodeState implements GameState que
- *  envuelva al Node. La evitamos por simplicidad: el árbol ES el estado.)
  */
 public class Node implements GameState {
 
-    public String name;              // etiqueta solo para depurar (A, X1...)
-    public Integer value;            // null si es nodo interno
-    public boolean isMax;            // true=MAX, false=MIN (irrelevante en hojas)
+    private String name;              // etiqueta solo para depurar (A, X1...)
+    private Integer value;            // null si es nodo interno
+    private boolean isMax;            // true=MAX, false=MIN (irrelevante en hojas)
     public List<Node> children;
 
     public Node(String name, boolean isMax) {
@@ -58,12 +55,12 @@ public class Node implements GameState {
 
     @Override
     public List<Node> getSuccessors() {
-        // List<Node> es subtipo de List<? extends GameState> ✔
+        // List<Node> es subtipo de List<? extends GameState>
         return children;
     }
 
     @Override
     public String toString() {
-        return isTerminal() ? name + "=" + value : name + (isMax ? "(MAX)" : "(MIN)");
+        return isTerminal() ? name + " = " + value : name + (isMax ? " (MAX)" : " (MIN)");
     }
 }

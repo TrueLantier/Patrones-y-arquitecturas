@@ -1,11 +1,15 @@
 package ia.minimax.faseuno;
 
+/**
+ * Esta clase es para mostrar los árboles de prueba pequeños, no los árboles de los juegos.
+ */
+
 public class TreePrinter {
-    public static void print(Node node, String prefix, boolean isLast) {
-        System.out.println(prefix + (isLast ? "└── " : "├── ") + node);
-        String childPrefix = prefix + (isLast ? "    " : "│   ");
+    public static void print(Node node, String prefijo, boolean isLast) {
+        System.out.println(prefijo + (isLast ? "└── " : "├── ") + node);
+        String childPrefijo = prefijo + (isLast ? "    " : "│   ");
         for (int i = 0; i < node.children.size(); i++) {
-            print(node.children.get(i), childPrefix, i == node.children.size() - 1);
+            print(node.children.get(i), childPrefijo, i == node.children.size() - 1);
         }
     }
 

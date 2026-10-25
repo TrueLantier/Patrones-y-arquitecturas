@@ -1,5 +1,10 @@
 package ia.minimax.faseuno;
 
+/**
+ * En esta clase se ponen árboles de prueba. Son cortos y se pueden hacer a mano.
+ * La idea es probar que el algoritmo funciona con ellos primero ya que son los casos más sencillos.
+ */
+
 public class Trees {
 
     public static String resultadoUno = "Árbol 1, resultado esperado: 3";
@@ -12,9 +17,9 @@ public class Trees {
      * Ejemplo clásico de Minimax:
      * Raíz MAX, nivel 2 MIN, hojas con valores.
      *
-     *                 MAX
+     *                A (MAX)
      *        /         |         \
-     *      MIN        MIN        MIN
+     *     B (MIN)     C (MIN)     D (MIN)
      *     / | \      / | \      / | \
      *    3 12 8     2  4 6     14 5 2
      *
@@ -44,6 +49,9 @@ public class Trees {
 
     /**
      * Árbol simple de dos niveles.
+     *
+     * FALTA DIBUJO
+     *
      * Resultado esperado: 6
      */
     public static Node treeDos() {

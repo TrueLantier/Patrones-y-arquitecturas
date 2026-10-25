@@ -17,7 +17,7 @@ public interface GameState {
     /**
      * Utilidad del estado. SOLO válida si isTerminal() == true.
      * Si se llama en un estado no terminal, la implementación puede lanzar
-     * excepción (en Node lo hacemos, para detectar bugs al construir árboles).
+     * excepción (en Node se hace para detectar bugs al construir árboles).
      */
     int utility();
 
@@ -26,9 +26,9 @@ public interface GameState {
 
     /**
      * Sucesores (hijos). En árboles preconstruidos devuelve la lista ya
-     * existente; en Nim / TicTacToe se generan al vuelo a partir del estado.
+     * existente. En Nim/TicTacToe se generan al vuelo a partir del estado.
      *
-     * Usamos el comodín ? extends GameState para que cada implementación
+     * Se usa el comodín ? extends GameState para que cada implementación
      * pueda devolver su propio tipo (List<Node>, List<NimState>, etc.).
      */
     List<? extends GameState> getSuccessors();

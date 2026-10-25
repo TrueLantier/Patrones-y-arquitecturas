@@ -6,16 +6,15 @@ package ia.minimax.faseuno;
  */
 public final class Minimax {
 
-    private Minimax() {}   // clase de utilidades, no instanciable
+    private Minimax() {}   // clase de utilidades, no instanciable.
 
     /**
      * Minimax clásico (sin poda). Recorre TODO el árbol.
-     *
      * Devuelve el valor que MAX puede garantizarse si ambos juegan óptimamente.
      * Coste: O(b^d) con b = factor de ramificación, d = profundidad.
      */
     public static int solve(GameState state) {
-        // Caso base: terminal → devolvemos la utilidad tal cual.
+        // Caso base: terminal --> devolvemos la utilidad tal cual.
         if (state.isTerminal()) {
             return state.utility();
         }
@@ -57,7 +56,7 @@ public final class Minimax {
             int best = Integer.MIN_VALUE;
             for (GameState child : state.getSuccessors()) {
                 best = Math.max(best, alphaBeta(child, alpha, beta));
-                alpha = Math.max(alpha, best);      // MAX sube la cota inferior
+                alpha = Math.max(alpha, best);      // MAX sube la cota inferior.
                 if (beta <= alpha) break;           // poda β
             }
             return best;
@@ -65,7 +64,7 @@ public final class Minimax {
             int best = Integer.MAX_VALUE;
             for (GameState child : state.getSuccessors()) {
                 best = Math.min(best, alphaBeta(child, alpha, beta));
-                beta = Math.min(beta, best);        // MIN baja la cota superior
+                beta = Math.min(beta, best);        // MIN baja la cota superior.
                 if (beta <= alpha) break;           // poda α
             }
             return best;
