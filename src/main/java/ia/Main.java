@@ -1,6 +1,9 @@
 package ia;
 
-import ia.minimax.faseuno.*;
+import ia.minimax.arboles.Trees;
+import ia.minimax.juegos.Minimax;
+import ia.minimax.arboles.Node;
+import ia.minimax.juegos.TicTacToeState;
 
 // PEDIR REGLAS DE JUEGOS Y EL ÁRBOL 2
 

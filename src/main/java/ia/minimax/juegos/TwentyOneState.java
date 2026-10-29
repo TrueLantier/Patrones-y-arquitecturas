@@ -1,4 +1,4 @@
-package ia.minimax.faseuno;
+package ia.minimax.juegos;
 
 /**
  * =====================================================================
@@ -49,6 +49,8 @@ package ia.minimax.faseuno;
  *    di hasta llegar a m' = siguiente múltiplo de 4 (4, 8, 12, 16, 20).
  * =====================================================================
  */
+
+import ia.minimax.interfaz.GameState;
 
 import java.util.ArrayList;
 import java.util.List;

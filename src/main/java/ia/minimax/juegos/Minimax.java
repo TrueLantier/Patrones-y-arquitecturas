@@ -1,4 +1,6 @@
-package ia.minimax.faseuno;
+package ia.minimax.juegos;
+
+import ia.minimax.interfaz.GameState;
 
 /**
  * Algoritmo Minimax (y su variante con poda alfa-beta).

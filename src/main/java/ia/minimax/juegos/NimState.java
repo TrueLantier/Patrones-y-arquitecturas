@@ -1,4 +1,4 @@
-package ia.minimax.faseuno;
+package ia.minimax.juegos;
 
 /**
  * =====================================================================
@@ -39,6 +39,8 @@ package ia.minimax.faseuno;
  *  sustracción: hay ramificación y conviene usar solveWithPruning.
  * =====================================================================
  */
+
+import ia.minimax.interfaz.GameState;
 
 import java.util.ArrayList;
 import java.util.List;

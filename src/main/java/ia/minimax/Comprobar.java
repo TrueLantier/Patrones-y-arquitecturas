@@ -1,4 +1,9 @@
-package ia.minimax.faseuno;
+package ia.minimax;
+
+import ia.minimax.arboles.TreePrinter;
+import ia.minimax.interfaz.GameState;
+import ia.minimax.juegos.Minimax;
+import ia.minimax.arboles.Node;
 
 public class Comprobar {
     public Comprobar(GameState game, String resultado, boolean isTree) {

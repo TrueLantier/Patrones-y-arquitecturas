@@ -1,4 +1,4 @@
-package ia.minimax.faseuno;
+package ia.minimax.juegos;
 
 /**
  * =====================================================================
@@ -35,6 +35,8 @@ package ia.minimax.faseuno;
  *    deja siempre al rival un múltiplo de 3.
  * =====================================================================
  */
+
+import ia.minimax.interfaz.GameState;
 
 import java.util.ArrayList;
 import java.util.List;

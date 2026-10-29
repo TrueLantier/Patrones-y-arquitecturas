@@ -1,4 +1,4 @@
-package ia.minimax.faseuno;
+package ia.minimax.arboles;
 
 /**
  * En esta clase se ponen árboles de prueba. Son cortos y se pueden hacer a mano.

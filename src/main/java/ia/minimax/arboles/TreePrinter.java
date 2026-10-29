@@ -1,4 +1,4 @@
-package ia.minimax.faseuno;
+package ia.minimax.arboles;
 
 /**
  * Esta clase es para mostrar los árboles de prueba pequeños, no los árboles de los juegos.

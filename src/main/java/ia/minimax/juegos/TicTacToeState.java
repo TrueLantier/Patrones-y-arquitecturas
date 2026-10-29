@@ -1,4 +1,6 @@
-package ia.minimax.faseuno;
+package ia.minimax.juegos;
+
+import ia.minimax.interfaz.GameState;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package ia.minimax.faseuno;
+package ia.minimax.interfaz;
 
 import java.util.List;
 
