@@ -43,7 +43,7 @@ public final class Minimax {
      *
      * α = mejor valor ya garantizado para MAX (cota inferior).
      * β = mejor valor ya garantizado para MIN (cota superior).
-     * Si β ≤ α, la rama actual no puede mejorar a ningún ancestro → se corta.
+     * Si β <= α, la rama actual no puede mejorar a ningún ancestro --> se corta.
      */
     public static int solveWithPruning(GameState state) {
         return alphaBeta(state, Integer.MIN_VALUE, Integer.MAX_VALUE);
