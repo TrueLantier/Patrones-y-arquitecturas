@@ -1,4 +1,4 @@
-package ia.minimax;
+package ia.minimax.main;
 
 import ia.minimax.arboles.TreePrinter;
 import ia.minimax.interfaz.GameState;

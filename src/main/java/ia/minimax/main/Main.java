@@ -1,4 +1,4 @@
-package ia;
+package ia.minimax.main;
 
 import ia.minimax.arboles.Trees;
 import ia.minimax.juegos.Minimax;

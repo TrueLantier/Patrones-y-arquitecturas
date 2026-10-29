@@ -1,4 +1,4 @@
-package ia.minimax;
+package ia;
 
 import java.util.ArrayList;
 import java.util.Arrays;
