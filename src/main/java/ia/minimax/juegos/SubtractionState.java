@@ -47,7 +47,7 @@ public class SubtractionState implements GameState {
     public static String respuestaUno = "-1"; // (3, true)
     public static String respuestaDos = "1"; // (3 false)
     public static String respuestaTres = "1"; // (4, true)
-    public static String respuestaCuatro = "-1"; // (10, true)
+    public static String respuestaCuatro = "-1"; // (10, false)
 
     public SubtractionState(int n, boolean isMax) {
         if (n < 0) throw new IllegalArgumentException("n >= 0");

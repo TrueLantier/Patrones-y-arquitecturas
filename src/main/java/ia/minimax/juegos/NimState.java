@@ -49,7 +49,7 @@ public class NimState implements GameState {
     private int a, b;
     private boolean isMax;
     public static String respuestaUno = "1"; // (1, 2, true)
-    public static String respuestaDos = "-1"; // (2, 1, true)
+    public static String respuestaDos = "-1"; // (1, 2, false)
     public static String respuestaTres = "-1"; // (2, 2, true)
     public static String respuestaCuatro = "1"; // (7, 11, true)
 

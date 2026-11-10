@@ -35,7 +35,56 @@ public class TicTacToeState implements GameState {
             if (c != EMPTY && c != X && c != O)
                 throw new IllegalArgumentException("Símbolo no válido: " + c);
         }
-        return new TicTacToeState(b);
+        TicTacToeState state = new TicTacToeState(b);
+        if (!state.isValid()) {
+            throw new IllegalArgumentException(
+                    "Estado ilegal (partida imposible): " + s);
+        }
+        return state;
+    }
+
+    // Método para comprobar si una partida es legal.
+    public boolean isValid() {
+        int xs = 0, os = 0;
+        for (char c : board) {
+            if (c == X) xs++;
+            else if (c == O) os++;
+        }
+
+        // 1. Alternancia X empieza.
+        if (xs != os && xs != os + 1) return false;
+
+        boolean xWins = hasWinner(X);
+        boolean oWins = hasWinner(O);
+
+        // 2. No ambos ganadores.
+        if (xWins && oWins) return false;
+
+        // 3. Victoria de X: X movió último y su jugada creó la victoria.
+        if (xWins) {
+            if (xs != os + 1) return false;
+            if (canBeLastMove(X)) return false;
+        }
+
+        // 4. Victoria de O: O movió último y su jugada creó la victoria.
+        if (oWins) {
+            if (xs != os) return false;
+            if (canBeLastMove(O)) return false;
+        }
+
+        return true;
+    }
+
+    // Método de apoyo: ¿Si se retira el último símbolo, el jugador deja de tener una jugada ganadora?
+    private boolean canBeLastMove(char symbol) {
+        for (int i = 0; i < 9; i++) {
+            if (board[i] == symbol) {
+                char[] test = board.clone();
+                test[i] = EMPTY;
+                if (!hasWinner(test, symbol)) return false;
+            }
+        }
+        return true;
     }
 
     // ---------- GameState ----------
@@ -89,21 +138,19 @@ public class TicTacToeState implements GameState {
         return true;
     }
 
-    private boolean hasWinner(char símbolo) {
-        // filas
+    private boolean hasWinner(char symbol) {
+        return hasWinner(board, symbol);
+    }
+
+    private static boolean hasWinner(char[] b, char symbol) {
         for (int r = 0; r < 3; r++)
-            if (board[r*3] == símbolo && board[r*3+1] == símbolo && board[r*3+2] == símbolo)
+            if (b[r*3] == symbol && b[r*3+1] == symbol && b[r*3+2] == symbol)
                 return true;
-
-        // columnas
         for (int c = 0; c < 3; c++)
-            if (board[c] == símbolo && board[3+c] == símbolo && board[6+c] == símbolo)
+            if (b[c] == symbol && b[3+c] == symbol && b[6+c] == symbol)
                 return true;
-
-        // diagonales
-        if (board[0] == símbolo && board[4] == símbolo && board[8] == símbolo) return true;
-        if (board[2] == símbolo && board[4] == símbolo && board[6] == símbolo) return true;
-
+        if (b[0] == symbol && b[4] == symbol && b[8] == symbol) return true;
+        if (b[2] == symbol && b[4] == symbol && b[6] == symbol) return true;
         return false;
     }
 
